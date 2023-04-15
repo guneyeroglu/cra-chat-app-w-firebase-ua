@@ -73,22 +73,25 @@ body {
             width: 48px;
             height: 48px;
             border-radius: 50%;
+            border: 3px solid transparent;
           }
 
           &__text {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 0.1rem;
+            gap: 0.25rem;
 
             p {
               font-size: 0.75rem;
               font-weight: 600;
+              letter-spacing: 0.025em;
             }
 
             span {
-              font-size: 1.25rem;
+              font-size: 1rem;
               font-weight: 400;
+              letter-spacing: 0.01em;
             }
           }
 
@@ -100,7 +103,7 @@ body {
             gap: 1rem;
 
             img {
-              border: 2px solid #ffd369;
+              border-color: #ffd369;
             }
 
             .message__text {
@@ -117,25 +120,25 @@ body {
           }
 
           &.received {
-            background-color: #ffd369;
+            background-color: #eeeeee;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
             gap: 1rem;
 
             img {
-              border: 2px solid #343540;
+              border-color: #00adb5;
             }
 
             .message__text {
               align-items: flex-start;
 
               p {
-                color: #343540;
+                color: #00adb5;
               }
 
               span {
-                color: #202123;
+                color: #343540;
               }
             }
           }
@@ -194,6 +197,11 @@ body {
             path {
               fill: #343540;
             }
+          }
+
+          &:hover {
+            cursor: pointer;
+            background-color: #ffd269be;
           }
         }
       }
