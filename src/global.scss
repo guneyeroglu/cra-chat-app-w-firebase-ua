@@ -48,6 +48,7 @@ body {
     gap: 2rem;
 
     .chat {
+      border-radius: 0.5rem;
       background-color: #202123;
       width: 100%;
       height: 100%;
@@ -178,6 +179,12 @@ body {
           margin-right: 2rem;
           background-color: #eeeeee;
           font-size: 2rem;
+
+          &::placeholder {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.75;
+          }
         }
 
         button {
@@ -202,6 +209,11 @@ body {
           &:hover {
             cursor: pointer;
             background-color: #ffd269be;
+          }
+
+          &[disabled] {
+            opacity: 0.5;
+            cursor: not-allowed;
           }
         }
       }

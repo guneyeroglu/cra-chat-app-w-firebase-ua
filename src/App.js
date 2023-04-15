@@ -88,8 +88,10 @@ const ChatRoom = () => {
           )}
         </div>
         <form onSubmit={sendMessage}>
-          <input value={formValue} onChange={({ target }) => setFormValue(target.value)} />
-          <button type='submit'>{<SendSvg />}</button>
+          <input value={formValue} onChange={({ target }) => setFormValue(target.value)} placeholder='Send message' />
+          <button type='submit' disabled={!formValue.trim().length}>
+            {<SendSvg />}
+          </button>
         </form>
       </div>
       <SignOut />
